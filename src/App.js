@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Typical from 'react-typical';
+import {MenuItem} from './Navigation_bar/Nav_menu_items.js';
+import Nav_menu from './Navigation_bar/Nav_menu';
+import GotoTop from './GotoTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav_menu/>
+      
+      <span className='Show_Intro'>
+        I'm a{' '}
+        <Typical
+          loop={Infinity}
+          wrapper='span'
+          steps={[
+            'web...', 3000,
+            'developer.', 3000,
+            'front end developer.', 3000
+          ]}
+        />
+      </span>
+
+      <main>
+        {MenuItem.map((item, index) => {
+          return(
+            <div className='content'>
+              <h3 id={item.title} key={index}>
+                {item.title}
+              </h3>
+            </div>
+          )
+        })}
+      </main>
+
+      <GotoTop/>
+
+      <style>@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');</style>
     </div>
   );
 }

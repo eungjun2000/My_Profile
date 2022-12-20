@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Show_Intro{
+  padding: 25px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Basic', sans-serif;
+}
+
+.content{
+  background-color: #61dafb;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  height: 100vh;
+}
+
+.Top{
+  position: fixed;
+  float: right;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
 }
