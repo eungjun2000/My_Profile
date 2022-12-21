@@ -2,11 +2,12 @@
     display: flex;
     height: 100px;
     padding-right: 20px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .Nav_menu_items .Nav_ul{
+    height: 70px;
     display: flex;
     list-style: none;
     align-items: center;

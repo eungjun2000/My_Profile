@@ -4,4 +4,4 @@ Upside Menu
 3. Skills(HTML, CSS, Javascript, React, ...)
 4. Works(Portfolio)
 5. Contact(Github, Blog, ...)
-6. Mode(Dark or Bright)
+6. Mode(Dark or Bright) -> to lottie animation

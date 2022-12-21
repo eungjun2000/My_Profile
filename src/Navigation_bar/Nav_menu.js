@@ -1,8 +1,8 @@
 import {MenuItem} from './Nav_menu_items.js';
-import DarkMode from './Dark_mode_menu.js';
 import {Link} from 'react-scroll';
 import './Nav_style.css';
 import 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js';
+import {Navbar} from 'react-bootstrap';
 
 const Nav_menu = () => {
     return(
@@ -16,9 +16,6 @@ const Nav_menu = () => {
                     )
                 })}
             </ul>
-
-            <DarkMode/>
-
             <style>@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');</style>          
         </nav>
     )

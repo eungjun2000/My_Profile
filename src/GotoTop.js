@@ -1,7 +1,7 @@
 import {Player} from '@lottiefiles/react-lottie-player';
-import {useRef, useState} from 'react';
+import {useRef} from 'react';
 
-const GotoTop = (props) => {
+const GotoTop = () => {
     const playerRef = useRef(Player);
 
     const onmouseenter = () => {

@@ -1,35 +1,19 @@
-const swithThemeToggle = document.querySelector(".Light_Dark_convert");
-const html = document.querySelector('html');
-let isDarkMode = false;
+import {createGlobalStyle} from "styled-components";
 
-function toggleTheme(){
-    isDarkMode = !isDarkMode;
-    swithTheme();
-}
-
-function swithTheme(){
-    if(isDarkMode){
-        html.classList.add('dark');
-    }else{
-        html.classList.remove('dark');
+export const GlobalStyles = createGlobalStyle`
+    body{
+        background: ${({theme}) => theme.bgColor};
+        color: ${({theme}) => theme.txtColor};
+        transition: all 0.5s ease-in;
     }
-}
+`;
 
-/*
-const Light_theme = {
+export const Dark_theme = {
+    bgColor: '#282c35',
+    txtColor: '#fff'
+};
+
+export const Light_theme = {
     bgColor: '#fff',
     txtColor: '#222'
 };
-
-const Dark_theme = {
-    bgColor: '282c35',
-    txtColor: '#fff'
-}
-
-const theme = {
-    Light_theme,
-    Dark_theme
-}
-
-export default theme;
-*/
