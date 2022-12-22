@@ -1,42 +1,40 @@
 import Typical from 'react-typical';
-import {MenuItem} from '../Navigation_bar/Nav_menu_items.js';
 import {Container, Row, Col} from 'react-bootstrap';
 import Lottie from 'lottie-react';
 import Web_Developer_Anim from '../Animation/Web_Developer_Anim.json'
 
 const Show_Intro = () => {
     return(
-        <section className='home' id='home'>
+        <section className='home' id='Home'>
             <Container>
-                <Row className="align-items-center">
-                    <Col className='Show_Intro' md={3}>
-                        I'm a{' '}
+                <Row className="home_row">
+                    <Col className='Show_Intro' md={7}>
+                        Hi!<br/>
+                        I'm a<br/>&lt;
                         <Typical
                             loop={Infinity}
                             wrapper='span'
-                            steps={[    
+                            steps={[
                             'UI/UX designer.', 3000,
-                            'also...', 3000,
                             'front end developer.', 3000
                             ]}
                         />
-                    </Col>
-                    <Col className='Show_Intro_sub' md={3}>
-                        <h1>Welcome to my website. I'm Eung Jun kang, a UI/UX designer and developer.</h1><br/>
-                        <p>⦁ &nbsp; UI/UX design</p>
+                        &#47;&gt;
+                        <h3>Welcome to my website. I'm Eung Jun kang, a UI/UX designer and Front end developer.</h3>
+                        <p style={{paddingTop:'30px'}}>⦁ &nbsp; UI/UX design</p>
                         <p>⦁ &nbsp; Front end develop</p>
                     </Col>
-                    <Col className='anim' md={6}>
+                    <Col className='Web_dev_anim' md={5}>
                         <Lottie
-                                animationData={Web_Developer_Anim}
-                                loop={true}
-                                autoplay={true}
-                                style={{
-                                    width: '500px',
-                                    height: '500px',
-                                    display: 'inline-block'
-                                }}
-                            />
+                            animationData={Web_Developer_Anim}
+                            loop={true}
+                            autoplay={true}
+                            style={{
+                                width: '550px',
+                                height: '550px',
+                                padding: '80px 50px 0px 50px'
+                            }}
+                        />
                     </Col>
                 </Row>
             </Container>
