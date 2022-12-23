@@ -1,7 +1,7 @@
 .Nav_menu_items{
     display: flex;
     height: 100px;
-    padding-top: 20px;
+    padding: 50px 920px 0px 0px;
     justify-content: flex-start;
     align-items: center;
 }

@@ -1,22 +1,26 @@
 import {MenuItem} from './Nav_menu_items.js';
 import {Link} from 'react-scroll';
 import './Nav_style.css';
-import 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js';
+import {Col, Container, Row} from 'react-bootstrap'
 
 const Nav_menu = () => {
     return(
         <nav className='Nav_menu_items'>
-            <ul className='Nav_ul'>
-                {MenuItem.map((item, index) => {
-                    return(
-                        <li key={index}>
-                            <Link to={item.title} className={item.Menu_name} smooth={true} offset={-380} duration={500}>
-                                {item.title}
-                            </Link>
-                        </li>
-                    )
-                })}
-            </ul>         
+            <Container>
+                <Row>
+                    <ul className='Nav_ul'>
+                        {MenuItem.map((item, index) => {
+                            return(
+                                <li key={index}>
+                                    <Link to={item.title} className={item.Menu_name} smooth={true} offset={-380} duration={500}>
+                                        {item.title}
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </Row>  
+            </Container>
         </nav>
     )
 }

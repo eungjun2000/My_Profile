@@ -1,4 +1,4 @@
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col} from 'react-bootstrap';
 import Lottie from 'lottie-react';
 import Profile_Anim from '../Animation/Profile_Anim.json'
 import Univ from '../Image/University.gif'
