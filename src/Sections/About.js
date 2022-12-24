@@ -17,9 +17,9 @@ const About = () => {
                             style={{
                                 width: '250px',
                                 height: '250px',
-                                padding: '0px 50px 100px 0px'
+                                padding: '0px 50px 100px 0px',
+                                zIndex: '1'
                             }}
-                            /* padding Attr : top, right, bottom, left */
                         />
                     </Col>
                     <Col className="My_background" md={9}>

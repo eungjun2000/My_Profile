@@ -15,8 +15,8 @@ const Show_Intro = () => {
                             loop={Infinity}
                             wrapper='span'
                             steps={[
-                            'UI/UX designer.', 3000,
-                            'front end developer.', 3000
+                                'UI/UX designer.', 3000,
+                                'front end developer.', 3000
                             ]}
                         />
                         &#47;&gt;
@@ -32,7 +32,8 @@ const Show_Intro = () => {
                             style={{
                                 width: '550px',
                                 height: '550px',
-                                padding: '80px 50px 0px 50px'
+                                padding: '80px 50px 0px 50px',
+                                zIndex: '2'
                             }}
                         />
                     </Col>
