@@ -22,9 +22,10 @@ function App() {
         <GlobalStyles/>
         <Toggle theme={theme} toggleTheme={toggleTheme}/>
      
+        <Nav_menu/>
+
         <Fonts/>
 
-        <Nav_menu/>
         <Home/>
         <About/>
         <Skills/>

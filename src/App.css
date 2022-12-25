@@ -14,8 +14,7 @@ html{
 /* Home Section - Start */
 
 .home{
-  padding: 0px 140px 0px 0px;
-  /*border: 2px solid red;*/
+  padding: 30px 140px 0px 0px;
 }
 
 .home_row{
@@ -23,6 +22,7 @@ html{
 }
 
 .Show_Intro{
+  animation: show_intro 1s ease-in-out;
   padding-top: 140px; 
   font-size: 45px;
   font-weight: bold;
@@ -37,6 +37,40 @@ html{
 
 .Show_Intro p{
   font-size: 17px;
+}
+
+.Web_dev_anim{
+  animation: show_home_anim 1s ease-in-out;
+}
+
+@keyframes show_intro{
+  0%{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show_home_anim{
+  0%{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Home Section - End */
@@ -95,12 +129,13 @@ html{
 /* Skills Section - Start */
 
 .skills{
-  left: 0;
   text-align: center;
 }
 
 .carousel{
-  height: 400px;
+  margin: 20px 100px 20px 100px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  border-radius: 15px;
 }
 
 .Skills_main{
@@ -116,23 +151,32 @@ html{
   padding: 10px 0px;
 }
 
-.card{
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  background-color: linear-gradient(to bottom right, blue, pink);
+.carousel{
+
 }
 
-.HTML_progress{
+.card{
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+}
 
+.card_upside{
+  position: absolute;
+  height: 80px;
+  width: 100%;
+}
+
+.circular_progress{
+  padding: 27px 50px 10px 50px;
+}
+
+.text_part{
+  font-family: 'Basic', sans-serif;
 }
 
 .CircleProgressBar{
-  position: relative;
-  display: block;
-  padding: 10px 0px 10px 0px;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
-  
+  /*padding: 10px 0px 10px 0px;*/
 }
 
 /* Skills Section - End */

@@ -1,20 +1,20 @@
 import {MenuItem} from './Nav_menu_items.js';
 import {Link} from 'react-scroll';
 import './Nav_style.css';
-import {Col, Container, Row, Navbar, NavItem} from 'react-bootstrap'
+import {Container, Row, Navbar, NavItem} from 'react-bootstrap'
 
 const Nav_menu = () => {
     return(
         <nav className='Nav_menu_items'>
             <Container>
                 <Row>
-                    <Navbar fixed='top' style={{background:'#FF7576', zIndex: '50'}}>
+                    <Navbar fixed='top' style={{paddingBottom: '0px', zIndex: '50'}}>
                         <ul className='Nav_ul'>
                             {MenuItem.map((item, index) => {
                                 return(
                                     <NavItem>
                                         <li key={index}>
-                                            <Link to={item.title} className={item.Menu_name} smooth={true} offset={-380} duration={500}>
+                                            <Link to={item.title} className={item.Menu_name} smooth={true} offset={50} duration={300}>
                                                 {item.title}
                                             </Link>
                                         </li>

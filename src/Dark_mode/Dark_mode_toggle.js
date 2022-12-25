@@ -22,8 +22,8 @@ const Dark_mode_toggle = ({theme, toggleTheme}) => {
                 <Lottie
                     animationData={SunMoonAnim}
                     style={{
-                        top: 0,
-                        right: 0,
+                        top: -3,
+                        right: -2,
                         height: '80px',
                         width: '80px',
                         position: 'fixed',

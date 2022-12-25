@@ -5,7 +5,11 @@ const Contact = () => {
         <section className='contact' id='Contact'>
             <Container>
                 <Row>
-                    
+                    <Col>
+                        Facebook
+                        Instagram
+                        Github
+                    </Col>
                 </Row>
             </Container>
         </section>

@@ -5,7 +5,9 @@ const Works = () => {
         <section className='works' id='Works'>
             <Container>
                 <Row>
-                    
+                    <Col>
+                        
+                    </Col>
                 </Row>
             </Container>
         </section>
