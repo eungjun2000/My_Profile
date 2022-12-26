@@ -12,6 +12,10 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;
     }
+
+    .skills_Text{
+        color: ${({color: '#fff'})}
+    }
 `;
 
 export const Dark_theme = {

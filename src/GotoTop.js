@@ -21,7 +21,7 @@ const GotoTop = () => {
                 src="https://assets10.lottiefiles.com/packages/lf20_2ylbszmp.json"
                 loop={false}
                 autoplay={false}
-                style={{height: '70px', width: '70px'}}
+                style={{height: '80px', width: '80px'}}
                 ref={playerRef}
             />
         </div>

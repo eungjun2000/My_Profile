@@ -30,9 +30,9 @@ const Show_Intro = () => {
                             loop={true}
                             autoplay={true}
                             style={{
-                                width: '550px',
-                                height: '550px',
-                                padding: '80px 50px 0px 50px',
+                                width: '600px',
+                                height: '600px',
+                                padding: '35px 50px 0px 40px',
                                 zIndex: '2'
                             }}
                         />

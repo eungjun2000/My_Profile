@@ -103,12 +103,11 @@ const Skills = () => {
                                         </CircularProgressbarWithChildren>
                                     </div>
                                     <br/>
-                                    <div className='text_part'>
+                                    <div className='skills_Text'>
                                         HTML : 96%
                                     </div>
                                 <br/>
                                 <ProgressBar now="96" variant="danger" style={{height: '5px'}} striped animated></ProgressBar>
-                                
                             </Card>
                         </Col>
                         <Col className='Skill_progress' md={2}>
@@ -125,7 +124,7 @@ const Skills = () => {
                                         </CircularProgressbarWithChildren>
                                     </div>
                                     <br/>
-                                    <div className='text_part'>
+                                    <div className='skills_Text'>
                                         CSS : 92%
                                     </div>
                                 <br/>
@@ -146,7 +145,7 @@ const Skills = () => {
                                         </CircularProgressbarWithChildren>
                                     </div>
                                     <br/>
-                                    <div className='text_part'>
+                                    <div className='skills_Text'>
                                         Javascript : 90%
                                     </div>
                                 <br/>
@@ -167,7 +166,7 @@ const Skills = () => {
                                         </CircularProgressbarWithChildren>
                                     </div>
                                     <br/>
-                                    <div className='text_part'>
+                                    <div className='skills_Text'>
                                         React : 90%
                                     </div>
                                 <br/>
@@ -188,7 +187,7 @@ const Skills = () => {
                                         </CircularProgressbarWithChildren>
                                     </div>
                                     <br/>
-                                    <div className='text_part'>
+                                    <div className='skills_Text'>
                                         NodeJS : 80%
                                     </div>
                                 <br/>
