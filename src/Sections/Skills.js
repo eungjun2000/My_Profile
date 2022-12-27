@@ -53,7 +53,7 @@ const Skills = () => {
     document.addEventListener('click', () => {
         if(state.goToSlide === 0){
             console.log("Hello");
-            const card_HTML = document.querySelector('.card_HTML');            
+            const card_HTML = document.querySelector('.card_HTML');
 
             state.goToSlide = -1;
         }else if(state.goToSlide === 1){
