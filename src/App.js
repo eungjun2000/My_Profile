@@ -1,4 +1,5 @@
 import './App.css'
+import {useState, useEffect} from 'react';
 import Fonts from './Font.js'
 import {ThemeProvider} from 'styled-components';
 import {useDarkMode} from './Dark_mode/useDarkMode';
@@ -11,8 +12,9 @@ import About from './Sections/About';
 import Skills from './Sections/Skills';
 import Works from './Sections/Works';
 import Contact from './Sections/Contact';
+import Loading from './Loading';
 
-function App() {
+function App(){
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === 'Light' ? Light_theme : Dark_theme;
 

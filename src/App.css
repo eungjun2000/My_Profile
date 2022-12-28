@@ -182,10 +182,26 @@ html{
 }
 
 .astronaut{
-  margin-top: -130px;
-  margin-left: -80px;
-  width: 500px; 
-  height: 500px;
+  transition: all 1.0s ease;
+}
+
+.prog_1{
+  width: 230px;
+  height: 200px;
+  transition: all 1.0s ease;
+}
+
+.prog_2{
+  width: 130px;
+  height: 100px;
+  transition: all 1.0s ease;
+  animation: prog2anim 3s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+
+@keyframes prog2anim{
+  0% {transform: none;}
+  50% {transform: translateY(-20px);}
+  100% {transform: none;}
 }
 
 .zig-zag-top{

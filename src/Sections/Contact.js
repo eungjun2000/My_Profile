@@ -3,28 +3,60 @@ import home from '../Image/home.png'
 import mail from '../Image/mail.png'
 import phone from '../Image/phone.png'
 import astronaut from '../Image/astronaut.png'
-import {useCallback, useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
+import program_window from '../Image/Program_window.png'
 
 const Contact = () => {
-    const observeRef = useRef();
+    const astronautRef = useRef();
+    const prog1Ref = useRef();
+    const prog2Ref = useRef();
+    const options = {threshold : 0.2};
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            console.log('entry', entry); 
-        });
-        observer.observe(observeRef.current);
-    })
+        const observer = new IntersectionObserver((entry) => {
+            if(entry[0].isIntersecting){
+                entry[0].target.style.opacity = 1;
+                entry[0].target.style.margin = '-160px 0px 0px -80px';
+                entry[0].target.style.width = '500px';
+                entry[0].target.style.height = '500px';
+            }else{
+                entry[0].target.style.opacity = 0.5;
+                entry[0].target.style.margin = '30px 0px 0px 100px';
+                entry[0].target.style.width = '300px';
+                entry[0].target.style.height = '300px';
+            }
+            return(() => {if(astronautRef.current){observer.unobserve(astronautRef.current);}}) 
+        }, options)
+        observer.observe(astronautRef.current);
+    }, []);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver((entry) => {
+            if(entry[0].isIntersecting){
+                entry[0].target.style.opacity = 1;
+                entry[0].target.style.margin = '-470px 0px 0px 150px';
+                entry[0].target.style.width = '130px';
+                entry[0].target.style.height = '100px';
+            }else{
+                entry[0].target.style.opacity = 0.3;
+                entry[0].target.style.margin = '-450px 0px 0px 300px';
+                entry[0].target.style.width = '0px';
+                entry[0].target.style.height = '0px';
+            }
+        }, options)
+        observer.observe(prog2Ref.current);
+    }, []);
 
     return(
         <section className='contact' id='Contact'>
-            <div class="zig-zag-top">
+            <div className="zig-zag-top">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
 
             <Container className='contact_container'>
                 <Row>
                     <Col md={4}>
-                        <div ref={observeRef}><img src={astronaut} className='astronaut'></img></div>
+                        <img src={astronaut} className='astronaut' ref={astronautRef}></img>
+                        <img src={program_window} className='prog_2' ref={prog2Ref}></img>
                     </Col>
                     <Col md={4}>
                         <div style={{fontSize: '20px', paddingTop: '15px'}}>Address</div><br/>
