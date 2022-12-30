@@ -23,6 +23,7 @@ const Show_Intro = () => {
                         <h3>Welcome to my website. I'm Eung Jun kang, a UI/UX designer and Front end developer.</h3>
                         <p style={{paddingTop:'30px'}}>⦁ &nbsp; UI/UX design</p>
                         <p>⦁ &nbsp; Front end develop</p>
+                        <button className='contact_btn'>CONTACT ME</button>
                     </Col>
                     <Col className='Web_dev_anim' md={5}>
                         <Lottie
@@ -30,9 +31,9 @@ const Show_Intro = () => {
                             loop={true}
                             autoplay={true}
                             style={{
-                                width: '600px',
-                                height: '600px',
-                                padding: '35px 50px 0px 40px',
+                                width: '650px',
+                                height: '650px',
+                                padding: '35px 50px 0px 30px',
                                 zIndex: '2'
                             }}
                         />

@@ -8,43 +8,45 @@ import program_window from '../Image/Program_window.png'
 
 const Contact = () => {
     const astronautRef = useRef();
-    const prog1Ref = useRef();
-    const prog2Ref = useRef();
+    const progRef = useRef();
     const options = {threshold : 0.2};
 
     useEffect(() => {
         const observer = new IntersectionObserver((entry) => {
-            if(entry[0].isIntersecting){
-                entry[0].target.style.opacity = 1;
-                entry[0].target.style.margin = '-160px 0px 0px -80px';
-                entry[0].target.style.width = '500px';
-                entry[0].target.style.height = '500px';
+            const elem = entry[0];
+            if(elem.isIntersecting){
+                elem.target.style.opacity = 1;
+                elem.target.style.margin = '-160px 0px 0px -80px';
+                elem.target.style.width = '500px';
+                elem.target.style.height = '500px';
             }else{
-                entry[0].target.style.opacity = 0.5;
-                entry[0].target.style.margin = '30px 0px 0px 100px';
-                entry[0].target.style.width = '300px';
-                entry[0].target.style.height = '300px';
+                elem.target.style.opacity = 0.5;
+                elem.target.style.margin = '30px 0px 0px 100px';
+                elem.target.style.width = '300px';
+                elem.target.style.height = '300px';
             }
-            return(() => {if(astronautRef.current){observer.unobserve(astronautRef.current);}}) 
+            return(() => {if(astronautRef.current){observer.unobserve(astronautRef.current);}});
         }, options)
         observer.observe(astronautRef.current);
     }, []);
-    
+
     useEffect(() => {
         const observer = new IntersectionObserver((entry) => {
-            if(entry[0].isIntersecting){
-                entry[0].target.style.opacity = 1;
-                entry[0].target.style.margin = '-470px 0px 0px 150px';
-                entry[0].target.style.width = '130px';
-                entry[0].target.style.height = '100px';
+            const elem = entry[0];
+            if(elem.isIntersecting){
+                elem.target.style.opacity = 1;
+                elem.target.style.margin = '-470px 0px 0px 150px';
+                elem.target.style.width = '130px';
+                elem.target.style.height = '100px';
             }else{
-                entry[0].target.style.opacity = 0.3;
-                entry[0].target.style.margin = '-450px 0px 0px 300px';
-                entry[0].target.style.width = '0px';
-                entry[0].target.style.height = '0px';
+                elem.target.style.opacity = 0.3;
+                elem.target.style.margin = '-450px 0px 0px 300px';
+                elem.target.style.width = '0px';
+                elem.target.style.height = '0px';
             }
+            return(() => {if(progRef.current){observer.unobserve(progRef.current);}});
         }, options)
-        observer.observe(prog2Ref.current);
+        observer.observe(progRef.current);
     }, []);
 
     return(
@@ -56,7 +58,7 @@ const Contact = () => {
                 <Row>
                     <Col md={4}>
                         <img src={astronaut} className='astronaut' ref={astronautRef}></img>
-                        <img src={program_window} className='prog_2' ref={prog2Ref}></img>
+                        <img src={program_window} className='prog' ref={progRef}></img>
                     </Col>
                     <Col md={4}>
                         <div style={{fontSize: '20px', paddingTop: '15px'}}>Address</div><br/>
@@ -64,7 +66,6 @@ const Contact = () => {
                         <div><img src={mail}/>&nbsp; Mail &nbsp; eungjun2000@gmail.com</div><br/>
                         <div><img src={phone}/>&nbsp; Phone &nbsp; +82 10 8426 4424</div>
                         <hr/>
-                        
                         <div style={{fontSize: '20px'}}>Follow</div><br/>
                         <div>
                             <a className="icon facebook" href="https://www.facebook.com/profile.php?id=100006064057937" target="_blank">

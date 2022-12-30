@@ -39,6 +39,28 @@ html{
   font-size: 17px;
 }
 
+.contact_btn{
+  border: none;
+  padding: 10px 50px 10px 50px;
+  border-radius: 7px;
+  font-size: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+}
+
+.contact_btn:hover{
+  animation: hoverGradient 7s linear infinite;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+}
+
+@keyframes hoverGradient {
+  0% {background-position: 0%;}
+  100% {background-position: 400%;}
+}
+
 .Web_dev_anim{
   animation: show_home_anim 1s ease-in-out;
 }
@@ -90,38 +112,53 @@ html{
   font-family: 'Gowun Dodum', sans-serif;
 }
 
+.profile_card{
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.mountain_background img{
+  height: 200px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.myface img{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 7px solid white;
+  margin-top: -80px;
+}
+
+.Myback_text{
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+.Myback_text h3{
+  font-weight: 1000;
+  font-size: 25px;
+  margin: 0px 0px 20px;
+}
+
+.Myback_text span{
+  font-size: 15px;
+}
+
 .Educational_background{
   padding-bottom: 100px;
 }
 
 .Experience{
   padding-bottom: 100px;
-}
-
-.liner{
-  border-left: 2px solid;
-  height: 500px;
-  left: 255px;
-  top: 820px;
-}
-
-.dot1{
-  position: absolute;
-  font-size: 50px;
-  left: 255px;
-}
-
-.dot2{
-  position: absolute;
-  font-size: 50px;
-  left: 255px;
-}
-
-.dot3{
-  position: absolute;
-  font-size: 50px;
-  left: 255px;
-  top: 780px;
 }
 
 /* About Section - End */
@@ -185,20 +222,14 @@ html{
   transition: all 1.0s ease;
 }
 
-.prog_1{
-  width: 230px;
-  height: 200px;
-  transition: all 1.0s ease;
-}
-
-.prog_2{
+.prog{
   width: 130px;
   height: 100px;
   transition: all 1.0s ease;
-  animation: prog2anim 3s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+  animation: proganim 3s cubic-bezier(0.6, 0, 0.4, 1) infinite;
 }
 
-@keyframes prog2anim{
+@keyframes proganim{
   0% {transform: none;}
   50% {transform: translateY(-20px);}
   100% {transform: none;}
