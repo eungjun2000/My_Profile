@@ -50,11 +50,11 @@ const Skills = () => {
         return {...skill_img, onClick: () => setState({goToSlide: index})};
     });
 
+    /*
     document.addEventListener('click', () => {
         if(state.goToSlide === 0){
             console.log("Hello");
             const card_HTML = document.querySelector('.card_HTML');
-
             state.goToSlide = -1;
         }else if(state.goToSlide === 1){
             const card_CSS = document.querySelector('.card_CSS');
@@ -63,12 +63,13 @@ const Skills = () => {
             state.goToSlide = -1;
         }
     })
+    */
 
     return(
         <section className='skills' id='Skills'>
             <Container>
                 <div className='Skills_main'>Skills</div>
-                    <span className='Skills_comment'>
+                    <span>
                         HTML, CSS, Javascript를 바탕으로, Node js를 이용한 React 라이브러리를 다룰 수 있습니다.
                     </span>
                     <div className='carousel'>
