@@ -3,12 +3,12 @@ import Univ from '../Image/University.gif'
 import High from '../Image/High_School.png'
 import mountain from '../Image/mountain.jpg'
 import brigde from '../Image/bridge.jpg'
-import File_not_found from '../Image/File_not_found.png'
-import space from '../Image/space.jpg'
+import space from '../Image/space.png'
 import MyFace from '../Image/MyFace.jpg'
 import Rotate from '../Image/rotate.png'
 import ReactCardFlip from 'react-card-flip';
 import {useState, useEffect, useRef} from 'react';
+import {ScrollContainer, ScrollPage} from "react-scroll-motion";
 
 const About = () => {
     const [isFlipped_about, setIsFlipped_about] = useState(false);
@@ -16,7 +16,6 @@ const About = () => {
     const card1Ref = useRef();
     const card2Ref = useRef();
     const card3Ref = useRef();
-    const options = {threshold : 0.1, rootMargin: '0px'};
 
     const flip_about = () => {
         setIsFlipped_about(!isFlipped_about);
@@ -32,25 +31,56 @@ const About = () => {
                 elem.target.style.opacity = 1;
                 elem.target.style.margin = '0px 0px 0px 0px';
             }else{
-                elem.target.style.opacity = 0.5;
+                elem.target.style.opacity = 0;
                 elem.target.style.margin = '80px 0px 0px 0px';
             }
             return(() => {if(card1Ref.current){observer.unobserve(card1Ref.current);}});
-        }, options)
+        }, {threshold : 0.2})
         observer.observe(card1Ref.current);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entry) => {
+            const elem = entry[0];
+            if(elem.isIntersecting){
+                elem.target.style.opacity = 1;
+                elem.target.style.margin = '0px 0px 0px 0px';
+            }else{
+                elem.target.style.opacity = 0;
+                elem.target.style.margin = '80px 0px 0px 0px';
+            }
+            return(() => {if(card2Ref.current){observer.unobserve(card2Ref.current);}});
+        }, {threshold : 0.3})
+        observer.observe(card2Ref.current);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entry) => {
+            const elem = entry[0];
+            if(elem.isIntersecting){
+                elem.target.style.opacity = 1;
+                elem.target.style.margin = '0px 0px 0px 0px';
+            }else{
+                elem.target.style.opacity = 0;
+                elem.target.style.margin = '80px 0px 0px 0px';
+            }
+            return(() => {if(card3Ref.current){observer.unobserve(card3Ref.current);}});
+        }, {threshold : 0.4})
+        observer.observe(card3Ref.current);
     }, []);
 
     return(
         <section className='about' id='About'>
-            <Container>
+            <Container className='ee'>
+            <ScrollContainer>
                 <div className='About_main'>About</div>
                 <span className='About_comment'>
                     <div>저에 대한 소개 및 학력, 경험 등을 소개합니다.</div>
                 </span>
                 <Row>
                     <Col md={4}>
-                        <p>About Me</p>
                         <div style={{transition: 'all 0.5s ease'}} ref={card1Ref}>
+                            <p>About Me</p>
                             <ReactCardFlip isFlipped={isFlipped_about} flipDirection="horizontal">
                                 <div className='profile_card front' onClick={flip_about}>
                                     <div className='mountain_background'><img src={mountain} alt="No image"></img></div>
@@ -92,36 +122,44 @@ const About = () => {
                         </div>
                     </Col>
                     <Col md={4}>
+                        <ScrollPage>
+                        <div style={{transition: 'all 0.5s ease'}} ref={card2Ref}>
                         <p>Educational background</p>
-                        <ReactCardFlip isFlipped={isFlipped_edu} flipDirection="horizontal">
-                            <div className='profile_card front' onClick={flip_edu}>
-                                <div className='bridge_background_front'><img src={brigde} alt="No image"></img></div>
-                            </div>
-                            <div className='profile_card back' onClick={flip_edu}>
-                                <div className='bridge_background'><img src={brigde} alt="No image"></img></div>
-                                <div className='high_all'>
-                                    <img src={High} className='high_school' alt="No image"></img>
-                                    <span>&nbsp;&nbsp;태장고등학교 졸업 &#40; 2014 ~ 2017 &#41;</span>
+                            <ReactCardFlip isFlipped={isFlipped_edu} flipDirection="horizontal">
+                                <div className='profile_card front' onClick={flip_edu}>
+                                    <div className='bridge_background_front'><img src={brigde} alt="No image"></img></div>
                                 </div>
-                                <div className='univ_all'>
-                                    <img src={Univ} className='univ' alt="No image"></img>
-                                    <span>&nbsp;&nbsp;명지대학교 컴퓨터공학과 졸업 &#40; 2017 ~ 2023 &#41;</span>
+                                <div className='profile_card back' onClick={flip_edu}>
+                                    <div className='bridge_background'><img src={brigde} alt="No image"></img></div>
+                                    <div className='high_all'>
+                                        <img src={High} className='high_school' alt="No image"></img>
+                                        <span>&nbsp;&nbsp;태장고등학교 졸업 &#40; 2014 ~ 2017 &#41;</span>
+                                    </div>
+                                    <div className='univ_all'>
+                                        <img src={Univ} className='univ' alt="No image"></img>
+                                        <span>&nbsp;&nbsp;명지대학교 컴퓨터공학과 졸업 &#40; 2017 ~ 2023 &#41;</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </ReactCardFlip>
+                            </ReactCardFlip>
+                        </div>
+                        </ScrollPage>
                     </Col>
                     <Col md={4}>
+
+                        <div style={{transition: 'all 0.5s ease'}} ref={card3Ref}>
                         <p>Experience</p>
-                        <div className='profile_card'>
-                            <div className='space_background'><img src={space} alt="No image"></img></div>
-                            <div className='experience'><img src={File_not_found}></img></div>
-                            <div className='Exp_text'>
-                                <h3>Not found!</h3>
-                                <span>준비중입니다...</span>
+                            <div className='profile_card'>
+                                <div className='space_background'><img src={space} alt="No image"></img></div>
+                                <div className='Exp_text'>
+                                    <h3>Not found!</h3>
+                                    <span>준비중입니다...</span>
+                                </div>
                             </div>
                         </div>
+
                     </Col>
                 </Row>
+            </ScrollContainer>    
             </Container>
         </section>
     )
