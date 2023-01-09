@@ -71,9 +71,9 @@ const About = () => {
 
     return(
         <section className='about' id='About'>
-            <Container className='ee'>
+            <Container>
             <ScrollContainer>
-                <div className='About_main'>About</div>
+                <div className='About_main'>ABOUT</div>
                 <span className='About_comment'>
                     <div>저에 대한 소개 및 학력, 경험 등을 소개합니다.</div>
                 </span>
