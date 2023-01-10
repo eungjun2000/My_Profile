@@ -11,6 +11,7 @@ import About from './Sections/About';
 import Skills from './Sections/Skills';
 import Works from './Sections/Works';
 import Contact from './Sections/Contact';
+import Mouse from './Mouse.js'
 
 function App(){
   const [theme, toggleTheme] = useDarkMode();
@@ -22,6 +23,8 @@ function App(){
         <GlobalStyles/>
         <Toggle theme={theme} toggleTheme={toggleTheme}/>
      
+        <Mouse/>
+
         <Nav_menu/>
 
         <Fonts/>
