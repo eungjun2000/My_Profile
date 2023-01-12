@@ -12,6 +12,7 @@ import Skills from './Sections/Skills';
 import Works from './Sections/Works';
 import Contact from './Sections/Contact';
 import Mouse from './Mouse.js'
+import ParticleBack from './ParticlesBack';
 
 function App(){
   const [theme, toggleTheme] = useDarkMode();

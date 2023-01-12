@@ -1,13 +1,32 @@
 import Typical from 'react-typical';
+import {useCallback} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import Particles from 'react-tsparticles';
+import {loadFull} from 'tsparticles';
 import Lottie from 'lottie-react';
 import Web_Developer_Anim from '../Animation/Web_Developer_Anim.json'
+import ParticleBack from '../ParticlesBack';
 
-const Show_Intro = () => {
+const Home = () => {    
+    const particlesInit = useCallback(async engine => {
+        await loadFull(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async container => {
+        console.log(container);
+    }, []);
+
     return(
         <section className='home' id='Home'>
-            <Container>
+   
+            <div className='particle_container'>
+                <ParticleBack></ParticleBack>
+            </div>
+    
+            <Container className='home_container'>
+            
                 <Row className="home_row">
+                
                     <Col className='Show_Intro' md={7}>
                         Hi!<br/>
                         I'm a<br/>&lt;
@@ -44,4 +63,4 @@ const Show_Intro = () => {
     )
 }
 
-export default Show_Intro;
+export default Home;
