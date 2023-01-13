@@ -1,7 +1,13 @@
 import {useCallback} from 'react';
-import Particles from 'react-tsparticles';
 import {loadFull} from 'tsparticles';
-import Univ from './Image/University.gif'
+import Particles from 'react-tsparticles';
+import HTML_icon from './Image/HTML_icon.png'
+import CSS_icon from './Image/CSS_icon.png'
+import Javascript_icon from './Image/Javascript_icon.png'
+import React_icon from './Image/React_icon.png'
+import Bootstrap_icon from './Image/Bootstrap_icon.png'
+import Vue_icon from './Image/Vue_icon.png'
+import Angular_icon from './Image/Angular_icon.png'
 
 const ParticlesBack = () => {
     const particlesInit = useCallback(async engine => {
@@ -19,7 +25,7 @@ const ParticlesBack = () => {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
-                    fpsLimit: 240,
+                    fpsLimit: 120,
                     fullScreen: false,
                     interactivity: {
                         events: {
@@ -41,6 +47,12 @@ const ParticlesBack = () => {
                                 distance: 150,
                                 duration: 0.4,
                             },
+                            remove: { 
+                                quantity: 2
+                            },
+                            bubble: { 
+                                distance: 400, duration: 2, opacity: 0.8, size: 40, speed: 3
+                            },
                         },
                     },
                     particles: {
@@ -52,6 +64,7 @@ const ParticlesBack = () => {
                         },
                         move: {
                             directions: "none",
+                            out_mode: "out",
                             enable: true,
                             random: false,
                             speed: 3,
@@ -60,7 +73,8 @@ const ParticlesBack = () => {
                         rotate: {
                             animation: {
                                 enable: true,
-                                speed: {min: 1, max: 10}
+                                speed: {min: 1, max: 10},
+                                sync: false
                             }
                         },
                         number: {
@@ -68,7 +82,7 @@ const ParticlesBack = () => {
                                 enable: true,
                                 area: 800,
                             },
-                            value: 50,
+                            value: 40,
                         },
                         opacity: {
                             anim: {enable: true, opacity_min: 0.5, speed: 1, sync: false},
@@ -76,15 +90,55 @@ const ParticlesBack = () => {
                             value: 1
                         },
                         shape: {
+                            type: "image",
+                            image:[
+                                {
+                                    src: HTML_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: CSS_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: Javascript_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: React_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: Bootstrap_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: Vue_icon,
+                                    width: 200,
+                                    height: 200,
+                                },
+                                {
+                                    src: Angular_icon,
+                                    width: 200,
+                                    height: 200,
+                                }
+                            ]
+                            /*
                             character: {
                                 fill: true,
                                 value: ["</>", "Hello World", "<div>", "<p>"],
                                 weight: "400"
                             },
-                            type: "char"    
+                            type: "char"
+                            */
                         },
                         size: {
-                            value: {min: 5, max: 15},
+                            value: {min: 5, max: 20},
                         },
                     },
                     detectRetina: true

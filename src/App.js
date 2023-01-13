@@ -1,4 +1,10 @@
 import './App.css'
+import './Sections/About/About.css'
+import './Sections/Home/Home.css'
+import './Sections/Skills/Skills.css'
+import './Sections/Works/Works.css'
+import './Sections/Contact/Contact.css'
+
 import Fonts from './Font.js'
 import {ThemeProvider} from 'styled-components';
 import {useDarkMode} from './Dark_mode/useDarkMode';
@@ -6,13 +12,12 @@ import {GlobalStyles, Dark_theme, Light_theme} from './Theme';
 import Toggle from './Dark_mode/Dark_mode_toggle'
 import Nav_menu from './Navigation_bar/Nav_menu';
 import GotoTop from './GotoTop';
-import Home from './Sections/Home'
-import About from './Sections/About';
-import Skills from './Sections/Skills';
-import Works from './Sections/Works';
-import Contact from './Sections/Contact';
+import Home from './Sections/Home/Home'
+import About from './Sections/About/About';
+import Skills from './Sections/Skills/Skills';
+import Works from './Sections/Works/Works';
+import Contact from './Sections/Contact/Contact';
 import Mouse from './Mouse.js'
-import ParticleBack from './ParticlesBack';
 
 function App(){
   const [theme, toggleTheme] = useDarkMode();

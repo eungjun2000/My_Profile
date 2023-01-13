@@ -1,0 +1,118 @@
+.about{
+    text-align: center;
+    padding: 300px 0px 300px 0px;
+    font-family: 'Basic', sans-serif;
+}
+
+.about p{
+    font-size: 30px;
+}
+
+.about span{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.About_main{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Basic', sans-serif;
+}
+
+.About_comment div{
+    margin: 20px 0px 70px 0px;
+}
+
+.profile_card{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.mountain_background img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.myface img{
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid white;
+    margin-top: -80px;
+}
+
+.Myback_text{
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+.Myback_text h3{
+    font-weight: 1000;
+    font-size: 25px;
+    margin: 0px 0px 20px;
+}
+
+.Myback_text span{
+    font-size: 15px;
+}
+
+.bridge_background_front img{
+    width: 100%;
+    margin-bottom: -100px;
+}
+
+.bridge_background img{
+    width: 100%;
+    margin-left: -600px;
+    margin-bottom: -205px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.high_school{
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.high_all{
+    margin: -290px 0px 0px 60px;
+    padding: 10px 10px 10px 10px;
+}
+
+.univ{
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.univ_all{
+    margin: 120px 0px 140px 67px;
+    padding: 10px 10px 10px 10px;
+}
+
+.space_background img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Exp_text h3{
+    font-weight: 1000;
+    font-size: 25px;
+    margin: -95px 0px 20px;
+    color: white;
+}
+
+.Exp_text{
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    color: white;
+}
