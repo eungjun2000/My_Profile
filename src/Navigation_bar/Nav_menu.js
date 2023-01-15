@@ -8,7 +8,7 @@ const Nav_menu = () => {
         <nav className='Nav_menu_items'>
             <Container>
                 <Row>
-                    <Navbar fixed='top' style={{paddingBottom: '0px', zIndex: '50'}}>
+                    <Navbar fixed='top' className='Navbar'>
                         <ul className='Nav_ul'>
                             {MenuItem.map((item, index) => {
                                 return(

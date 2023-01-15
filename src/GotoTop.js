@@ -1,15 +1,15 @@
-import {Player} from '@lottiefiles/react-lottie-player';
+import Lottie from 'lottie-react';
 import {useRef} from 'react';
+import GototopAnim from './Animation/Goto_top_Anim.json'
 
 const GotoTop = () => {
-    const playerRef = useRef(Player);
+    const lottieRef = useRef();
 
     const onmouseenter = () => {
-        playerRef.current.setLoop(true);
-        playerRef.current.play();
+        lottieRef.current.playSegments([0, 67], true);
     };
     const onmouseleave = () => {
-        playerRef.current.stop();
+        lottieRef.current.playSegments([67, 0], true);
     };
     const onmouseclick = () => {
         window.scrollTo(0, 0);
@@ -17,12 +17,12 @@ const GotoTop = () => {
 
     return(
         <div className='Top' onMouseEnter={onmouseenter} onMouseLeave={onmouseleave} onClick={onmouseclick}>
-            <Player
-                src="https://assets10.lottiefiles.com/packages/lf20_2ylbszmp.json"
+            <Lottie
+                animationData={GototopAnim}
                 loop={false}
                 autoplay={false}
                 style={{height: '80px', width: '80px'}}
-                ref={playerRef}
+                lottieRef={lottieRef}
             />
         </div>
     )

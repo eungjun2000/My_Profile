@@ -24,8 +24,8 @@ const Dark_mode_toggle = ({theme, toggleTheme}) => {
                     style={{
                         top: -3,
                         right: -2,
-                        height: '80px',
-                        width: '80px',
+                        height: '70px',
+                        width: '70px',
                         position: 'fixed',
                         display: 'flex',
                         cursor: 'pointer',

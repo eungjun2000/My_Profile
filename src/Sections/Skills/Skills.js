@@ -11,6 +11,7 @@ import Javascript_icon from '../../Image/Javascript_icon.png'
 import React_icon from '../../Image/React_icon.png'
 import Bootstrap_icon from '../../Image/Bootstrap_icon.png'
 import Github_icon from '../../Image/Github_icon.png'
+import Npm_icon from '../../Image/Npm_icon.png'
 import code_3d from '../../Image/code_3d.png'
 import phone_3d from '../../Image/phone_3d.png'
 import tweezers_3d from '../../Image/tweezers_3d.png'
@@ -78,9 +79,9 @@ const Skills = () => {
             <Container>
                 <div style={{textAlign:'center'}}>
                     <div className='Skills_main'>SKILLS</div>
-                        <span>
-                            HTML, CSS, Javascript를 바탕으로, Node js를 이용한 React 라이브러리를 다룰 수 있습니다.
-                        </span>
+                    <span className='Skills_comment'>
+                        <div>HTML, CSS, Javascript를 바탕으로, React, 반응형 웹을 위한 Bootstrap 라이브러리를 다룰 수 있습니다.</div>
+                    </span>
                     </div>
                     <div className='carousel'>
                         <Row>
@@ -180,12 +181,21 @@ const Skills = () => {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div className='Skill_progress' style={{marginTop:'75px'}}>
+                            <div className='Skill_progress' style={{marginTop:'30px'}}>
                                 <img src={Github_icon} className='tool_icon' alt='tool_icon_1'></img>
                                 <span className='titles'>&nbsp; Github</span>
                                 <div className='skill_bar'>
                                     <span className='skill_percent gitHub'>
                                         <span className='tooltips gitHub'>99%</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div className='Skill_progress'>
+                                <img src={Npm_icon} className='tool_icon' alt='tool_icon_2'></img>
+                                <span className='titles'>&nbsp; Npm</span>
+                                <div className='skill_bar'>
+                                    <span className='skill_percent Npm'>
+                                        <span className='tooltips Npm'>98%</span>
                                     </span>
                                 </div>
                             </div>
