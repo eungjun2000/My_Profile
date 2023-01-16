@@ -1,5 +1,5 @@
 .home{
-    padding: 30px 140px 200px 0px;
+    padding: 40px 140px 200px 0px;
     clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
     background: linear-gradient(to bottom, #6772A4 0%, #3D3949);
 }

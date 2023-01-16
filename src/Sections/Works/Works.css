@@ -13,6 +13,62 @@
     margin: 20px 0px 70px 0px;
 }
 
-.works span{
+.works span, .card_text{
     font-family: 'Gowun Dodum', sans-serif;
 }
+
+.work_row{
+    margin-bottom: 23px;
+    text-align: left;
+}
+
+.myprofile_card{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+.myprofile_card:hover{
+    transform: scale(1.05);
+} 
+
+/*
+.slide_container{
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    margin: auto;
+    width: 100%;
+    place-items: center;
+}
+
+.slide_container .slide_rail{
+    display: flex;
+    width: calc(250px * 8);
+    animation: autoscroll 3s linear infinite;
+}
+
+@keyframes autoscroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 4));
+    }
+}
+
+.slide_container .slide{
+    display: flex;
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+}
+
+.slide_rail:hover{
+    animation-play-state: paused;
+}
+
+.slide img:hover{
+    transform: translateZ(20px);
+    transition: 1s;
+}
+*/
