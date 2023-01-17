@@ -176,7 +176,7 @@ const Skills = () => {
                                 <img src={tweezers_3d} className='threeD_images' alt='No_Image'></img>
                                 <div>
                                     <div className='threeD_title'>&lt;Tool&#47;&gt;</div>
-                                    <div className='threeD_text_tool'>진보적인 웹 사이트를 만들기 위한 최신 기술들을 적용합니다.</div>
+                                    <div className='threeD_text_tool'>웹 사이트 개발, 유지보수를 위한 도구들을 사용할 수 있습니다.</div>
                                 </div>
                             </div>
                         </Col>

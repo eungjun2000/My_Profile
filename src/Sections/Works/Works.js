@@ -17,7 +17,7 @@ const Works = () => {
                             <Card.Body>
                                 <Card.Title>My Profile</Card.Title>
                                 <Card.Text className='card_text'>
-                                    제 자신을 소개한 웹 페이지입니다.
+                                    제 자신을 소개한 웹 페이지입니다. + 구성, 참여도, tools ...
                                 </Card.Text>
                                 <Button variant="primary">Visit Website</Button>
                             </Card.Body>
@@ -38,6 +38,45 @@ const Works = () => {
                 </Row>
                 
                 <Row className='work_row'>
+                    <Col md={6}>
+                        <Card border='0' className='myprofile_card'>
+                            <Card.Img src={NotReady}/>
+                            <Card.Body>
+                                <Card.Title>Not Ready</Card.Title>
+                                <Card.Text className='card_text'>
+                                    프로젝트 준비 중입니다...
+                                </Card.Text>
+                                <Button variant="primary">Visit Website</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={6}>
+                        <Card border='0' className='myprofile_card'>
+                            <Card.Img src={NotReady}/>
+                            <Card.Body>
+                                <Card.Title>Not Ready</Card.Title>
+                                <Card.Text className='card_text'>
+                                    프로젝트 준비 중입니다...
+                                </Card.Text>
+                                <Button variant="primary">Visit Website</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+
+                <Row className='work_row'>
+                    <Col md={6}>
+                        <Card border='0' className='myprofile_card'>
+                            <Card.Img src={NotReady}/>
+                            <Card.Body>
+                                <Card.Title>Not Ready</Card.Title>
+                                <Card.Text className='card_text'>
+                                    프로젝트 준비 중입니다...
+                                </Card.Text>
+                                <Button variant="primary">Visit Website</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
                     <Col md={6}>
                         <Card border='0' className='myprofile_card'>
                             <Card.Img src={NotReady}/>
