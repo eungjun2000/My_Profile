@@ -1,12 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-    body{
+    body, nav{
         background: ${({theme}) => theme.bgColor};
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;
     }
-    nav{
+    .skill_row{
         background: ${({theme}) => theme.navHeader};
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;
@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 export const Dark_theme = {
     navHeader: '#1e243d',
     bgColor: '#282c35',
-    txtColor: '#fff'
+    txtColor: '#fff',
 };
 
 export const Light_theme = {

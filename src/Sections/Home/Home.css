@@ -37,6 +37,7 @@
 }
 
 .contact_btn{
+    position: relative;
     border: none;
     padding: 10px 50px 10px 50px;
     border-radius: 7px;
@@ -45,14 +46,15 @@
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 300%;
-    pointer-events: none;
+    z-index: 100;
 }
 
 .contact_btn:hover{
     animation: hoverGradient 7s linear infinite;
     background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    cursor: none;
     background-size: 300%;
+    cursor: none;
+    z-index: 100;
 }
 
 @keyframes hoverGradient {

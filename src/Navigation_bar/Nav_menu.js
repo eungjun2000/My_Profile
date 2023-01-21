@@ -25,6 +25,7 @@ const Nav_menu = () => {
             <Container>
                 <Row>
                     <Navbar fixed='top' className='Navbar'>
+                        <span className='logo'>LOGO</span>
                         <ul className={toggle ? "Nav_ul_mobile" : "Nav_ul"}>
                             {MenuItem.map((item, index) => {
                                 return(

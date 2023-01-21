@@ -77,18 +77,6 @@ const Works = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={6}>
-                        <Card border='0' className='myprofile_card'>
-                            <Card.Img src={NotReady}/>
-                            <Card.Body>
-                                <Card.Title>Not Ready</Card.Title>
-                                <Card.Text className='card_text'>
-                                    프로젝트 준비 중입니다...
-                                </Card.Text>
-                                <Button variant="primary">Visit Website</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
                 </Row>
             </Container>
         </section>

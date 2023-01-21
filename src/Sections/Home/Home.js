@@ -5,6 +5,10 @@ import Web_Developer_Anim from '../../Animation/Web_Developer_Anim.json'
 import ParticleBack from '../../ParticlesBack';
 
 const Home = () => {
+    const gotoContact = () => {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
     return(
         <section className='home' id='Home'>
             <ParticleBack/>
@@ -25,7 +29,7 @@ const Home = () => {
                         <h3>Welcome to my website. I'm Eung Jun kang, a UI/UX designer and Front end developer.</h3>
                         <p style={{paddingTop:'30px'}}>⦁ &nbsp; UI/UX design</p>
                         <p>⦁ &nbsp; Front end develop</p>
-                        <button className='contact_btn'>CONTACT ME</button>
+                        <button className='contact_btn' onClick={gotoContact}>CONTACT ME</button>
                     </Col>
                     <Col className='Web_dev_anim' md={5}>
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className='blob'>
