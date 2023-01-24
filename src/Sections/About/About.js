@@ -2,8 +2,8 @@ import {Container, Row, Col, Image, Card} from 'react-bootstrap';
 import Univ from '../../Image/University.gif'
 import High from '../../Image/High_School.png'
 import mountain from '../../Image/mountain.jpg'
-import brigde from '../../Image/bridge.jpg'
-import space from '../../Image/space.png'
+import boat from '../../Image/boat.png'
+import space from '../../Image/space.jpg'
 import MyFace from '../../Image/MyFace.jpg'
 import Rotate from '../../Image/rotate.png'
 import ReactCardFlip from 'react-card-flip';
@@ -111,10 +111,9 @@ const About = () => {
                                     <div className='Myback_text'>
                                         <h3>Who am I?</h3>
                                         <span>
-                                            안녕하세요. 웹 UI/UX 디자인 및 프론트엔드 개발을 위해 항상 공부하고, 노력하고 있습니다.
-                                            사용자들의 시선을 사로잡을 수 있는 웹 페이지 디자인뿐만 아니라 그에 맞춘 혁신적인 기능까지 생각해낼 수 있습니다. 
-                                            생각하는 것에 그치지 않고 제가 가진 세심한 성격으로 웹의 세부적인 부분을 보고 그리며, 웹 페이지의 기능이 잘 동작하도록
-                                            구현할 수 있습니다.
+                                            안녕하세요. 프론트엔드 개발을 위해 항상 공부하고, 노력하고 있습니다. 사용자들의 시선을 사로잡을 수 있는 웹 페이지 디자인
+                                            뿐만 아니라 그에 맞춘 혁신적인 기능까지 생각해낼 수 있습니다. 생각하는 것에 그치지 않고 제가 가진 세심한 성격으로 웹의 
+                                            세부적인 부분을 보고 그리며, 웹 페이지의 기능이 잘 동작하도록 구현할 수 있습니다.
                                         </span>
                                     </div>
                                 </div>
@@ -122,30 +121,26 @@ const About = () => {
                         </div>
                     </Col>
                     <Col md={4}>
-                        <ScrollPage>
+                        {/* <ScrollPage><ScrollPage/> */}
                         <div style={{transition: 'all 0.5s ease'}} ref={card2Ref}>
                         <p>Educational background</p>
-                            <ReactCardFlip isFlipped={isFlipped_edu} flipDirection="horizontal">
-                                <div className='profile_card front' onClick={flip_edu}>
-                                    <div className='bridge_background_front'><img src={brigde} alt="No image"></img></div>
-                                </div>
-                                <div className='profile_card back' onClick={flip_edu}>
-                                    <div className='bridge_background'><img src={brigde} alt="No image"></img></div>
+                            <div className='profile_card front' onClick={flip_edu}>
+                                <div className='boat_background_front'><img src={boat} alt="No image"></img></div>
+                                <div className='Edu_text'>
+                                    <h3 style={{margin: '17px 0px 145px 0px', fontSize:'20px'}}>My Educational Background</h3>
                                     <div className='high_all'>
-                                        <img src={High} className='high_school' alt="No image"></img>
-                                        <span>&nbsp;&nbsp;태장고등학교 졸업 &#40; 2014 ~ 2017 &#41;</span>
-                                    </div>
-                                    <div className='univ_all'>
-                                        <img src={Univ} className='univ' alt="No image"></img>
-                                        <span>&nbsp;&nbsp;명지대학교 컴퓨터공학과 졸업 &#40; 2017 ~ 2023 &#41;</span>
-                                    </div>
+                                    <img src={High} className='high_school' alt="No image"></img>
+                                    <span>&nbsp;&nbsp;태장고등학교 졸업&#40; 2014 ~ 2017 &#41;</span>
                                 </div>
-                            </ReactCardFlip>
+                                <div className='univ_all'>
+                                    <img src={Univ} className='univ' alt="No image"></img>
+                                    <span>&nbsp;&nbsp;명지대학교 컴퓨터공학과 졸업 &#40; 2017 ~ 2023 &#41;</span>
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        </ScrollPage>
                     </Col>
                     <Col md={4}>
-
                         <div style={{transition: 'all 0.5s ease'}} ref={card3Ref}>
                         <p>Experience</p>
                             <div className='profile_card'>
@@ -156,7 +151,6 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-
                     </Col>
                 </Row>
             </ScrollContainer>    

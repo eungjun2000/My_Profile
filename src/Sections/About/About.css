@@ -59,43 +59,40 @@
     font-size: 15px;
 }
 
-.bridge_background_front img{
+.boat_background_front img{
     width: 100%;
-    margin-bottom: -100px;
 }
 
-.bridge_background img{
-    width: 100%;
-    margin-left: -600px;
-    margin-bottom: -205px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+.Edu_text{
+    padding: 20px 20px 20px 20px;
+    font-size: 13px;
+    text-align: center;
 }
 
 .high_school{
     z-index: 1;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 5px solid white;
 }
 
 .high_all{
-    margin: -290px 0px 0px 60px;
-    padding: 10px 10px 10px 10px;
+    margin: -107px 0px 0px 0px;
+    padding: 0px 15px 30px 15px;
 }
 
 .univ{
     z-index: 1;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 5px solid white;
 }
 
 .univ_all{
-    margin: 120px 0px 140px 67px;
-    padding: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 15px 10px 15px;
 }
 
 .space_background img{

@@ -1,8 +1,8 @@
 .logo{
-    padding: 0px 15px 10px 20px;
+    padding: 0px 15px 10px 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .Nav_menu_items .Navbar{
@@ -19,11 +19,11 @@
     list-style: none;
     align-items: center;
     justify-content: center;
-    font-family: 'Teko', sans-serif;
+    font-family: 'Kavoon', cursive;
 }
 
 .Navbar .Nav_menu_items .Nav_ul_mobile{
-    background: #2f71cc;
+    /*background: #2f71cc;*/
 }
 
 .nav_item{
@@ -31,30 +31,31 @@
     text-decoration: none;
     color: inherit;
     margin: 20px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .nav_item:hover{
-    font-size: 35px;
+    font-size: 25px;
     cursor: none;
+    color: #FF1E9D;
 }
 
 .nav_item::before{
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -5px;
     width: 0;
     height: 3px;
-    background: #2f71cc;
+    background: #FF1E9D;
     transition: all 0.2s;
 }
 
 .nav_item:hover::before{
     border-radius: 20px;
-    bottom: 7px;
+    bottom: -5px;
     width: 100%;
 }
 
