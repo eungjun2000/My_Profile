@@ -87,7 +87,7 @@ const Skills = () => {
                         <Row>
                             <Col md={2}></Col>
                             <Col md={8}>
-                                <div style={{width: '100%', height: '16rem', margin: '0 0rem'}}>
+                                <div style={{width: '110%', height: '16rem', margin: '10px 0px 0px -30px'}}>
                                     <Carousel
                                         slides={skill_image}
                                         goToSlide={state.goToSlide}
@@ -181,7 +181,7 @@ const Skills = () => {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div className='Skill_progress' style={{marginTop:'30px'}}>
+                            <div className='Skill_progress'>
                                 <img src={Github_icon} className='tool_icon' alt='tool_icon_1'></img>
                                 <span className='titles'>&nbsp; Github</span>
                                 <div className='skill_bar'>

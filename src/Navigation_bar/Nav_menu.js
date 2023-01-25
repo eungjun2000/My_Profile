@@ -1,8 +1,10 @@
+import './Nav_style.css';
 import {useState} from 'react';
 import {MenuItem} from './Nav_menu_items.js';
 import {Link} from 'react-scroll';
 import {Container, Row, Navbar, NavItem} from 'react-bootstrap'
-import './Nav_style.css';
+import Logo_Anim from '../Animation/Logo_Anim.json'
+import Lottie from 'lottie-react';
 import Hamburger from 'hamburger-react';
 
 const Nav_menu = () => {
@@ -25,7 +27,17 @@ const Nav_menu = () => {
             <Container>
                 <Row>
                     <Navbar fixed='top' className='Navbar'>
-                        <span className='logo'>LOGO</span>
+                        <Lottie
+                            animationData={Logo_Anim}
+                            loop={false}
+                            autoplay={true}
+                            style={{
+                                width: '45px',
+                                height: '45px',
+                                margin: '-10px 0px 0px 30px',
+                            }}
+                        />
+                        <span className='logo'>Portfolio.</span>
                         <ul className={toggle ? "Nav_ul_mobile" : "Nav_ul"}>
                             {MenuItem.map((item, index) => {
                                 return(

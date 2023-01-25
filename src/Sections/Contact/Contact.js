@@ -5,6 +5,7 @@ import phone from '../../Image/phone.png'
 import astronaut from '../../Image/astronaut.png'
 import {useEffect, useRef} from 'react';
 import program_window from '../../Image/Program_window.png'
+import ParticlesStar from '../../ParticlesStar';
 
 const Contact = () => {
     const astronautRef = useRef();
@@ -52,21 +53,21 @@ const Contact = () => {
     return(
         <section className='contact' id='Contact'>
             <div className="zig-zag-top">
+            <ParticlesStar/>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
-
             <Container className='contact_container'>
                 <Row>
-                    <Col md={4}>
+                    <Col md={4} className='contact_col'>
                         <img src={astronaut} className='astronaut' ref={astronautRef}></img>
                         <img src={program_window} className='prog' ref={progRef}></img>
                     </Col>
-                    <Col md={4}>
-                        <div style={{fontSize: '20px', paddingTop: '15px'}}>Address</div><br/>
+                    <Col md={4} className='contact_col'>
+                        <div style={{fontSize: '20px', paddingTop: '15px', paddingLeft: '6px', color: '#66CDAA'}}>Address</div><br/>
                         <div><img src={home}/>&nbsp; Home &nbsp; South Korea, Suwon</div><br/>
                         <div><img src={mail}/>&nbsp; Mail &nbsp; eungjun2000@gmail.com</div><br/>
                         <div><img src={phone}/>&nbsp; Phone &nbsp; +82 10 8426 4424</div>
                         <hr/>
-                        <div style={{fontSize: '20px'}}>Follow</div><br/>
+                        <div style={{fontSize: '20px', color: '#66CDAA'}}>Follow</div><br/>
                         <div>
                             <a className="icon facebook" href="https://www.facebook.com/profile.php?id=100006064057937" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -82,9 +83,9 @@ const Contact = () => {
                             </a>
                         </div>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className='contact_col'>
                         <form className='contact_form' action="https://formsubmit.co/2676625dd12c557c19842dd77887a93a" method="POST">
-                            <div style={{fontSize: '30px'}}>Contact me</div>
+                            <div style={{fontSize: '30px', color: '#66CDAA'}}>Contact me</div>
                             <input type="text" id="name" placeholder='Input your name' required></input>
                             <input type="email" id="email" placeholder='Input your email' required></input>
                             <textarea id="message" rows="5"></textarea>
@@ -92,7 +93,7 @@ const Contact = () => {
                         </form>
                     </Col>
                     <hr/>
-                    <div style={{textAlign: 'center', fontSize: '15px', paddingBottom: '13px'}}>ⓒ 2022 All right reserved</div>
+                    <div style={{textAlign: 'center', fontSize: '15px', padding: '10px 0px 10px 0px', zIndex: '1'}}>ⓒ 2022 All right reserved</div>
                 </Row>
             </Container>
             </div>

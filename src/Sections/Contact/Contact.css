@@ -7,6 +7,19 @@
     transition: all 1.0s ease;
 }
 
+.zig-zag-top{
+    padding-bottom: 20px;
+    background: #17182f;
+}
+
+.zig-zag-top #tsparticles_star{
+    position: absolute;
+    margin-top: -45px;
+    width: 100%;
+    height: 70%;
+    clip-path: polygon(36% 6%, 57% 0, 70% 7%, 85% 0, 100% 9%, 100% 100%, 0 100%, 0 9%, 16% 0);
+}
+
 .prog{
     width: 130px;
     height: 100px;
@@ -20,10 +33,7 @@
     100% {transform: none;}
 }
 
-.zig-zag-top{
-    background-color: #333;
-}
-
+/*
 .zig-zag-top::before{
     content: "";
     display: block;
@@ -35,6 +45,11 @@
                 linear-gradient(-45deg, transparent 33.333%, #333 33.333%, #333 66.667%, transparent 66.667%);
     background-size: 20px 40px;
     z-index: -1;
+}
+*/
+
+.contact_col{
+    z-index: 1;
 }
 
 .icon{
@@ -49,6 +64,7 @@
     color: black;
     overflow: hidden;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .icon i{
@@ -102,6 +118,7 @@
     font-size: 12px;
     border-radius: 7px;
     outline: none;
+    z-index: 1;
 }
 
 .contact_form button{
@@ -112,6 +129,7 @@
     padding: 7px 0px 7px 0px;
     margin: 5px auto;
     width: 30%;
+    z-index: 1;
 }
 
 .contact_form button:hover{

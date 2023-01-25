@@ -46,7 +46,7 @@
 }
 
 .threeD_container_front{
-    margin: 93px 0px 0px 50px;
+    margin: 100px 0px 0px 50px;
 }
 
 .threeD_text_front{
@@ -54,11 +54,12 @@
 }
 
 .threeD_container_tool{
-    margin: 50px 0px 0px 50px;
+    margin: 60px 0px 0px 50px;
+    padding: 0px 0px 0px 0px;
 }
 
 .threeD_text_tool{
-    margin: 0px 0px 90px 110px;
+    margin: 0px 0px 0px 110px;
 }
 
 .Skill_progress{

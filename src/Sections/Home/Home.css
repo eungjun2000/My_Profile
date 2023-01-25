@@ -6,9 +6,10 @@
 
 .home_row{
     padding-left: 45px;
+    width: 100%;
 }
 
-.home #tsparticles{
+.home #tsparticles_home{
     position: absolute;
     left: 0;
     top: 0;

@@ -19,7 +19,7 @@ const ParticlesBack = () => {
     return(
         <div className='particle_container'>
             <Particles className='particle_container'
-                id="tsparticles"
+                id="tsparticles_home"
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
