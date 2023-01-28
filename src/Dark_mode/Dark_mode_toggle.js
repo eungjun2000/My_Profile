@@ -23,7 +23,7 @@ const Dark_mode_toggle = ({theme, toggleTheme}) => {
                     animationData={SunMoonAnim}
                     style={{
                         top: -6,
-                        right: -6,
+                        right: -3,
                         height: '75px',
                         width: '75  px',
                         position: 'fixed',

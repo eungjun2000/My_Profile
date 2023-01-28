@@ -1,4 +1,3 @@
-import {Container, Row, Col, Image, Card} from 'react-bootstrap';
 import Univ from '../../Image/University.gif'
 import High from '../../Image/High_School.png'
 import mountain from '../../Image/mountain.jpg'
@@ -7,8 +6,8 @@ import space from '../../Image/space.jpg'
 import MyFace from '../../Image/MyFace.jpg'
 import Rotate from '../../Image/rotate.png'
 import ReactCardFlip from 'react-card-flip';
+import {Container, Row, Col, Image, Card} from 'react-bootstrap';
 import {useState, useEffect, useRef} from 'react';
-import {ScrollContainer, ScrollPage} from "react-scroll-motion";
 
 const About = () => {
     const [isFlipped_about, setIsFlipped_about] = useState(false);
@@ -72,7 +71,6 @@ const About = () => {
     return(
         <section className='about' id='About'>
             <Container>
-            <ScrollContainer>
                 <div className='About_main'>ABOUT</div>
                 <span className='About_comment'>
                     <div>저에 대한 소개 및 학력, 경험 등을 소개합니다.</div>
@@ -152,8 +150,7 @@ const About = () => {
                             </div>
                         </div>
                     </Col>
-                </Row>
-            </ScrollContainer>    
+                </Row>  
             </Container>
         </section>
     )

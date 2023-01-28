@@ -18,6 +18,11 @@
     margin: 70px 30px 70px 10px;
 }
 
+.slide_btn{
+    text-align: center;
+    padding: 110px 0px 0px 0px;
+}
+
 .skills_txt{
     font-size: 30px;
     font-weight: 700;

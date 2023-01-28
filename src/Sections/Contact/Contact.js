@@ -1,11 +1,11 @@
-import {Container, Row, Col} from 'react-bootstrap';
-import home from '../../Image/home.png'
-import mail from '../../Image/mail.png'
-import phone from '../../Image/phone.png'
 import astronaut from '../../Image/astronaut.png'
-import {useEffect, useRef} from 'react';
 import program_window from '../../Image/Program_window.png'
 import ParticlesStar from '../../ParticlesStar';
+import {Container, Row, Col} from 'react-bootstrap';
+import {useEffect, useRef} from 'react';
+import {IconButton} from '@mui/material'
+import {HouseRounded, AttachEmail, Call} from '@mui/icons-material';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const Contact = () => {
     const astronautRef = useRef();
@@ -50,6 +50,23 @@ const Contact = () => {
         observer.observe(progRef.current);
     }, []);
 
+    const theme = createTheme({
+        palette: {
+            white_color: {
+                main: '#fff'
+            }
+        },
+    })
+
+    const handleCopyClipBoard = async(text) => {
+        try{
+            await navigator.clipboard.writeText(text);
+            alert('클립보드에 복사되었습니다.')
+        }catch(e){
+            alert('Copy failed');
+        }
+    };
+
     return(
         <section className='contact' id='Contact'>
             <div className="zig-zag-top">
@@ -63,9 +80,28 @@ const Contact = () => {
                     </Col>
                     <Col md={4} className='contact_col'>
                         <div style={{fontSize: '20px', paddingTop: '15px', paddingLeft: '6px', color: '#66CDAA'}}>Address</div><br/>
-                        <div><img src={home}/>&nbsp; Home &nbsp; South Korea, Suwon</div><br/>
-                        <div><img src={mail}/>&nbsp; Mail &nbsp; eungjun2000@gmail.com</div><br/>
-                        <div><img src={phone}/>&nbsp; Phone &nbsp; +82 10 8426 4424</div>
+                        <div style={{marginLeft: '-5px'}}>
+                            <ThemeProvider theme={theme}>
+                                <div>
+                                    <IconButton color='white_color'>
+                                        <HouseRounded fontSize='large'/>
+                                    </IconButton>
+                                    &nbsp; Home &nbsp; South Korea, Suwon
+                                </div><br/>
+                                <div>
+                                    <IconButton color='white_color' onClick={() => {handleCopyClipBoard('eungjun2000@gmail.com')}}>
+                                        <AttachEmail fontSize='large'/>
+                                    </IconButton>
+                                    &nbsp; Mail &nbsp; eungjun2000@gmail.com
+                                </div><br/>
+                                <div>
+                                    <IconButton color='white_color' onClick={() => {handleCopyClipBoard('010 8426 4424')}}>
+                                        <Call fontSize='large'/>
+                                    </IconButton>
+                                    &nbsp; Phone &nbsp; +82 10 8426 4424
+                                </div>
+                            </ThemeProvider>
+                        </div>
                         <hr/>
                         <div style={{fontSize: '20px', color: '#66CDAA'}}>Follow</div><br/>
                         <div>

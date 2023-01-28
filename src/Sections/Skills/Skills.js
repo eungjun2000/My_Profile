@@ -21,6 +21,8 @@ import {config} from 'react-spring';
 import {useState} from 'react';
 import {v4 as uuidv4} from "uuid";
 import Carousel from 'react-spring-3d-carousel';
+import {IconButton} from '@mui/material'
+import {NavigateBefore, NavigateNext} from '@mui/icons-material'
 
 const Skills = () => {
     const [state, setState] = useState({
@@ -58,20 +60,17 @@ const Skills = () => {
         return {...skill_img, onClick: () => setState({goToSlide: index})};
     });
 
-    /*
-    document.addEventListener('click', () => {
-        if(state.goToSlide === 0){
-            console.log("Hello");
-            const card_HTML = document.querySelector('.card_HTML');
-            state.goToSlide = -1;
-        }else if(state.goToSlide === 1){
-            const card_CSS = document.querySelector('.card_CSS');
-            //card_CSS.style.marginTop = "-30px";
-            //card_CSS.style.transition = "0.5s ";
-            state.goToSlide = -1;
-        }
-    })
-    */
+    const Prev_skill = () => {
+        setState((slideState) => {
+            return{...slideState, goToSlide: slideState.goToSlide - 1}
+        });
+    }
+
+    const Next_skill = () => {
+        setState((slideState) => {
+            return{...slideState, goToSlide: slideState.goToSlide + 1}
+        });
+    }
 
     return(
         <div className='skills_outside'>
@@ -85,18 +84,34 @@ const Skills = () => {
                     </div>
                     <div className='carousel'>
                         <Row>
-                            <Col md={2}></Col>
+                            <Col md={2} className='slide_btn'>
+                                <div>
+                                    <IconButton
+                                        color='black'
+                                        onClick={Prev_skill}
+                                    ><NavigateBefore fontSize='large'/>
+                                    </IconButton>
+                                </div>
+                            </Col>
                             <Col md={8}>
                                 <div style={{width: '110%', height: '16rem', margin: '10px 0px 0px -30px'}}>
                                     <Carousel
                                         slides={skill_image}
                                         goToSlide={state.goToSlide}
                                         offsetRadius={state.offsetRadius}
-                                        animationConfig={state.config}  
+                                        animationConfig={state.config}
                                     />
                                 </div>
                             </Col>
-                            <Col md={2}></Col>
+                            <Col md={2} className='slide_btn'>
+                                <div>
+                                    <IconButton
+                                        color='black'
+                                        onClick={Next_skill}
+                                    ><NavigateNext fontSize='large'/>
+                                    </IconButton>
+                                </div>
+                            </Col>
                         </Row>
                     </div>
 

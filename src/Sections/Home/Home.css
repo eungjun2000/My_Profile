@@ -1,4 +1,6 @@
 .home{
+    position: relative;
+    overflow: hidden;
     padding: 40px 140px 200px 0px;
     clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
     background: linear-gradient(to bottom, #6772A4 0%, #3D3949);
@@ -67,10 +69,13 @@
     animation: show_home_anim 1s ease-in-out;
 }
 
-.blob{
+.blob_con{
+    position: relative;
+}
+
+.blob_con .blob{    
     position: absolute;
-    margin: 50px 20px 0px 0px;
-    z-index: -1;
+    width: 300%;
 }
 
 @keyframes show_intro{
