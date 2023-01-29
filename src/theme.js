@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;
     }
+    .contact_top .shape-fill{
+        fill: ${({theme}) => theme.bgColor};
+        transition: all 0.5s ease-in;
+    }
 `;
 
 export const Dark_theme = {
