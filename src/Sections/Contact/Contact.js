@@ -2,10 +2,17 @@ import astronaut from '../../Image/astronaut.png'
 import program_window from '../../Image/Program_window.png'
 import ParticlesStar from '../../ParticlesStar';
 import {Container, Row, Col} from 'react-bootstrap';
-import {useEffect, useRef} from 'react';
-import {IconButton} from '@mui/material'
+import {useState, useEffect, useRef} from 'react';
+import {IconButton, Tooltip} from '@mui/material'
 import {HouseRounded, AttachEmail, Call} from '@mui/icons-material';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import CloseIcon from '@mui/icons-material/Close';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
+
+function SlideSnackbar(props) {
+    return <Slide {...props} direction="up" />;
+}
 
 const Contact = () => {
     const astronautRef = useRef();
@@ -58,18 +65,57 @@ const Contact = () => {
         },
     })
 
+    const [state, setState] = useState({
+        open: false,
+        Transition: Slide,
+    });
+
     const handleCopyClipBoard = async(text) => {
         try{
             await navigator.clipboard.writeText(text);
-            alert('클립보드에 복사되었습니다.')
         }catch(e){
             alert('Copy failed');
         }
     };
 
+    const handleClick = (Transition) => () => {
+        setState({
+            open: true,
+            Transition,
+        });
+    };
+
+    const handleClose = () => {
+        setState({
+            ...state,
+            open: false,
+        });
+    };
+
+    const action = (
+        <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+        ><CloseIcon fontSize="small" />
+        </IconButton>
+    )
+
     return(
         <footer className='contact' id='Contact'>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
+            <div>
+                <Snackbar
+                    open={state.open}
+                    onClose={handleClose}
+                    autoHideDuration={1300}
+                    TransitionComponent={state.Transition}
+                    message="클립보드에 복사되었습니다."
+                    action={action}
+                    key={state.Transition.name}
+                />
+            </div>
             <div className="contact_top">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -94,15 +140,23 @@ const Contact = () => {
                                         &nbsp; Home &nbsp; South Korea, Suwon
                                     </div>
                                     <div>
-                                        <IconButton color='white_color' onClick={() => {handleCopyClipBoard('eungjun2000@gmail.com')}}>
-                                            <AttachEmail fontSize='large'/>
-                                        </IconButton>
+                                        <Tooltip title='copy' placement='left' arrow>
+                                            <span onClick={handleClick(SlideSnackbar)}>
+                                                <IconButton color='white_color' onClick={() => {handleCopyClipBoard('eungjun2000@gmail.com')}}>
+                                                    <AttachEmail fontSize='large'/>
+                                                </IconButton>
+                                            </span>
+                                        </Tooltip>
                                         &nbsp; Mail &nbsp; eungjun2000@gmail.com
                                     </div>
                                     <div>
-                                        <IconButton color='white_color' onClick={() => {handleCopyClipBoard('010 8426 4424')}}>
-                                            <Call fontSize='large'/>
-                                        </IconButton>
+                                        <Tooltip title='copy' placement='left' arrow>
+                                            <span onClick={handleClick(SlideSnackbar)}>
+                                                <IconButton color='white_color' onClick={() => {handleCopyClipBoard('010 8426 4424')}}>
+                                                    <Call fontSize='large'/>
+                                                </IconButton>
+                                            </span>
+                                        </Tooltip>
                                         &nbsp; Phone &nbsp; +82 10 8426 4424
                                     </div>
                                 </ThemeProvider>
@@ -134,11 +188,10 @@ const Contact = () => {
                             </form>
                         </Col>
                         <hr/>
-                        <div style={{textAlign: 'center', fontSize: '15px', padding: '10px 0px 30px 0px', zIndex: '1'}}>ⓒ 2022 All right reserved</div>
+                        <div style={{textAlign: 'center', fontSize: '15px', padding: '10px 0px 22px 0px', zIndex: '1'}}>ⓒ 2022 All right reserved</div>
                     </Row>
                 </Container>
             </div>
-            <div className='bottom'></div>
         </footer>
     )
 }

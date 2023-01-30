@@ -119,7 +119,6 @@ const About = () => {
                         </div>
                     </Col>
                     <Col md={4}>
-                        {/* <ScrollPage><ScrollPage/> */}
                         <div style={{transition: 'all 0.5s ease'}} ref={card2Ref}>
                         <p>Educational background</p>
                             <div className='profile_card front' onClick={flip_edu}>
