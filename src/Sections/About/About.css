@@ -79,7 +79,7 @@
 
 .high_all{
     margin: -107px 0px 0px 0px;
-    padding: 0px 15px 30px 15px;
+    padding: 5px 15px 30px 15px;
 }
 
 .univ{
@@ -92,7 +92,11 @@
 
 .univ_all{
     margin: 0px 0px 0px 0px;
-    padding: 10px 15px 10px 15px;
+    padding: 14px 15px 20px 15px;
+}
+
+.space_background{
+    height: 50%;
 }
 
 .space_background img{

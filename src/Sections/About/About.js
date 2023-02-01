@@ -2,7 +2,7 @@ import Univ from '../../Image/University.gif'
 import High from '../../Image/High_School.png'
 import mountain from '../../Image/mountain.jpg'
 import boat from '../../Image/boat.png'
-import space from '../../Image/space.jpg'
+import space from '../../Image/space.png'
 import MyFace from '../../Image/MyFace.jpg'
 import Rotate from '../../Image/rotate.png'
 import ReactCardFlip from 'react-card-flip';

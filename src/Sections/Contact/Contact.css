@@ -1,97 +1,34 @@
 .contact{
-    position: relative;
-    padding-top: 200px;
+    padding: 0px 0px 300px 0px;
     font-family: 'Basic', sans-serif;
 }
 
-.astronaut{
-    transition: all 1.0s ease;
+.Contact_main{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Basic', sans-serif;
 }
 
-.prog{
-    width: 130px;
-    height: 100px;
-    transition: all 1.0s ease;
-    animation: proganim 3s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+.header_c{
+    background: #FFB400;
+    width: 100%;
 }
 
-@keyframes proganim{
-    0% {transform: none;}
-    50% {transform: translateY(-20px);}
-    100% {transform: none;}
-}
-
-.contact_col{
-    z-index: 1;
-}
-
-.icon{
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    bottom: 10px; right: 9px;
-    width: 40px; height: 40px;
-    margin: 10px;
-    background: white;
-    box-shadow: 0 5px 15px 2px #00000070;
-    color: black;
-    overflow: hidden;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.icon i{
-    padding: 8px 0px 0px 0px;
-    font-size: 25px;
-    transition: 0.3s linear;
-}
-
-.icon:hover i{
-    transform: scale(1.1);
-    color: white;
-}
-
-.icon::before{
-    content: "";
-    position: absolute;
-    left: -10%; 
-    top: -10%;
-    width: 10%; 
-    height: 10%;
-    border-radius: 50%;
-    transform: scale(1.2);
-}
-
-.facebook::before{background: linear-gradient(#009FFD, #2A2A72);}
-.instagram::before{background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
-.github::before{background: linear-gradient(#000, #36096D, #37D5D6);}
-.youtube::before{background: linear-gradient(#FE0944, #F53844, #FC575E);}
-
-.icon:hover::before{
-    width: 105%;
-    height: 105%;
-    transition: 0.3s ease-out;
-}
-
-.contact div{
-    color: white;
+.contact_container{
+    padding: 150px 0px 150px 0px;
 }
 
 .contact_form{
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    text-align: center;
+    padding: 20px 0px 10px 0px;
 }
 
-.contact_form input, .contact_form textarea{
-    border: 0px;
-    padding: 10px;
-    margin: 10px 0px;
-    font-size: 12.5px;
-    border-radius: 7px;
-    outline: none;
-    z-index: 1;
+.contact span{
+    font-family: 'Gowun Dodum', sans-serif;
+    padding-bottom: 50px;
+}
+
+.Contact_comment div{
+    margin: 20px 0px 0px 0px;
 }
 
 .contact_form button{
@@ -100,27 +37,11 @@
     color: white;
     border-radius: 20px;
     padding: 7px 0px 7px 0px;
-    margin: 5px auto;
+    margin-top: 10px;
     width: 30%;
     z-index: 1;
 }
 
 .contact_form button:hover{
     cursor: none;
-}
-
-.contact_top{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 6px solid #17182f;
-}
-
-.contact_top #tsparticles_star{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
 }

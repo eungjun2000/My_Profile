@@ -4,6 +4,7 @@ import './Sections/Home/Home.css'
 import './Sections/Skills/Skills.css'
 import './Sections/Works/Works.css'
 import './Sections/Contact/Contact.css'
+import './Footer/Footer.css'
 
 import Fonts from './Font.js'
 import {ThemeProvider} from 'styled-components';
@@ -17,6 +18,7 @@ import About from './Sections/About/About';
 import Skills from './Sections/Skills/Skills';
 import Works from './Sections/Works/Works';
 import Contact from './Sections/Contact/Contact';
+import Footer from './Footer/Footer';
 import Mouse from './Mouse.js'
 
 function App(){
@@ -41,6 +43,8 @@ function App(){
         <Works/>
         <Contact/>
         <GotoTop/>
+
+        <Footer/>
 
       </ThemeProvider>
     </div>
