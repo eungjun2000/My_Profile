@@ -15,16 +15,23 @@ export const GlobalStyles = createGlobalStyle`
         fill: ${({theme}) => theme.bgColor};
         transition: all 0.5s ease-in;
     }
+    .contact_fill, .contact_main{
+        background: ${({theme}) => theme.contactBgColor};
+        fill: ${({theme}) => theme.contactBgColor};
+        transition: all 0.5s ease-in;
+    }
 `;
 
 export const Dark_theme = {
     navHeader: '#1e243d',
     bgColor: '#282c35',
     txtColor: '#fff',
+    contactBgColor: '#3C467D'
 };
 
 export const Light_theme = {
     navHeader: '#d2d4ed',
     bgColor: '#fff',
-    txtColor: '#222'
+    txtColor: '#222',
+    contactBgColor: '#FFB400'
 };
