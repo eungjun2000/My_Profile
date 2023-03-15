@@ -21,13 +21,12 @@ const Home = () => {
                             loop={Infinity}
                             wrapper='span'
                             steps={[
-                                'UI/UX designer.', 3000,
+                                '', 3000,
                                 'front end developer.', 3000
                             ]}
                         />
                         &#47;&gt;
-                        <h3>Welcome to my website. I'm Eung Jun kang, a UI/UX designer and Front end developer.</h3>
-                        <p style={{paddingTop:'30px'}}>⦁ &nbsp; UI/UX design</p>
+                        <h3>Welcome to my website. I'm Eung Jun kang, Front end developer.</h3>
                         <p>⦁ &nbsp; Front end develop</p>
                         <button className='contact_btn' onClick={gotoContact}>CONTACT ME</button>
                     </Col>
