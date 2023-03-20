@@ -9,7 +9,7 @@ import './Footer/Footer.css'
 import Fonts from './Font.js'
 import {ThemeProvider} from 'styled-components';
 import {useDarkMode} from './Dark_mode/useDarkMode';
-import {GlobalStyles, Dark_theme, Light_theme} from './Theme';
+import {GlobalStyles, Dark_theme, Light_theme} from './theme';
 import Toggle from './Dark_mode/Dark_mode_toggle'
 import Nav_menu from './Navigation_bar/Nav_menu';
 import GotoTop from './GotoTop';
