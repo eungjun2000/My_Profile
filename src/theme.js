@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;
     }
-    .skill_row, .profile_card{
+    .skill_row, .license_container, .profile_card{
         background: ${({theme}) => theme.navHeader};
         color: ${({theme}) => theme.txtColor};
         transition: all 0.5s ease-in;

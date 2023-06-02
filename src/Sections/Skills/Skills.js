@@ -15,6 +15,7 @@ import Npm_icon from '../../Image/Npm_icon.png'
 import code_3d from '../../Image/code_3d.png'
 import phone_3d from '../../Image/phone_3d.png'
 import tweezers_3d from '../../Image/tweezers_3d.png'
+import trophy_3d from '../../Image/trophy_3d.png'
 
 import {Container, Row, Col} from 'react-bootstrap'
 import {config} from 'react-spring';
@@ -214,6 +215,91 @@ const Skills = () => {
                                     </span>
                                 </div>
                             </div>
+                        </Col>
+                    </Row>
+
+                    <br/><br/><div className='skills_txt'>License</div>
+
+                    <Row className='license_row'>
+                        <Col md={3} className='license_container'>
+                            <img src={trophy_3d} className='trophy_icon' alt='No_image'/><hr/>
+                            <Row style={{justifyContent:'center'}}>
+                                <Col md={4}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>자격증 명</div>
+                                        <div className='liner'></div>
+                                        정보처리기사
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>취득일</div>
+                                        <div className='liner'></div>
+                                        2022.05
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>합/불 여부</div>
+                                        <div className='liner'></div>
+                                        합
+                                    </span>
+                                </Col>
+                            </Row>
+                        </Col>
+
+                        <Col md={3} className='license_container'>
+                            <img src={trophy_3d} className='trophy_icon' alt='No_image'/><hr/>
+                            <Row style={{justifyContent:'center'}}>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>자격증 명</div>
+                                        <div className='liner'></div>
+                                        TOEIC
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>취득일</div>
+                                        <div className='liner'></div>
+                                        2022.09
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>점수</div>
+                                        <div className='liner'></div>
+                                        765
+                                    </span>
+                                </Col>
+                            </Row>
+                        </Col>
+                        
+                        <Col md={3} className='license_container'>
+                            <img src={trophy_3d} className='trophy_icon' alt='No_image'/><hr/>
+                            <Row style={{justifyContent:'center'}}>
+                                <Col md={6}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>자격증 명</div>
+                                        <div className='liner'></div>
+                                        2종보통운전면허(자동)
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>취득일</div>
+                                        <div className='liner'></div>
+                                        2022.07
+                                    </span>
+                                </Col>
+                                <Col md={3}>
+                                    <span className='license_content'>
+                                        <div className='license_item'>합/불 여부</div>
+                                        <div className='liner'></div>
+                                        합
+                                    </span>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
             </Container>
