@@ -235,7 +235,7 @@ const Skills = () => {
                                     <span className='license_content'>
                                         <div className='license_item'>취득일</div>
                                         <div className='liner'></div>
-                                        2022.05
+                                        2023.09
                                     </span>
                                 </Col>
                                 <Col md={3}>
